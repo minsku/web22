@@ -1,23 +1,8 @@
-import SodexoLunchMenu from './assets/sodexo-day-example.json';
-// console.log(SodexoLunchMenu);
+import SodexoData from './modules/sodexo-data.js';
+import FazerData from './modules/fazer-data.js';
 
-const coursesEn = [];
-const coursesFi = [];
 let language = 'fi';
-let currentMenu = coursesFi;
-
-/**
- * Extract course titles from Sodexo menu JSON object
- *
- * @param {string} menu - JSON Menu to be parsed
- */
-const parseSodexoMenu = (menu) => {
-  const courses = Object.values(menu);
-  for (const course of courses) {
-    coursesEn.push(course.title_en);
-    coursesFi.push(course.title_fi);
-  }
-};
+let currentMenu = SodexoData.coursesFi;
 
 /**
  * Renders menu courses on page
@@ -38,10 +23,10 @@ const renderMenu = () => {
 const switchLanguage = () => {
   if (language === 'fi') {
     language = 'en';
-    currentMenu = coursesEn;
+    currentMenu = SodexoData.coursesEn;
   } else {
     language = 'fi';
-    currentMenu = coursesFi;
+    currentMenu = SodexoData.coursesFi;
   }
 };
 
@@ -75,7 +60,6 @@ const pickARandomCourse = courses => {
  * Initialize application
  */
 const init = () => {
-  parseSodexoMenu(SodexoLunchMenu.courses);
   renderMenu();
   // Event listeners for buttons
   document.querySelector('#switch-lang').addEventListener('click', () => {
