@@ -1,5 +1,6 @@
-import FazerLunchMenuEn from './assets/fazer-en.json';
-import FazerLunchMenu from './assets/fazer.json';
+import FazerLunchMenuEn from './fazer-week-example-en.json';
+import FazerLunchMenu from './fazer-week-example.json';
+
 
 /**
  * Parses a menu for a day from Fazer weekly json data

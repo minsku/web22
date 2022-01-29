@@ -1,4 +1,4 @@
-import SodexoLunchMenu from './assets/sodexo-day-example.json';
+import SodexoLunchMenu from './sodexo-day-example.json';
 // console.log(SodexoLunchMenu);
 
 const coursesEn = [];

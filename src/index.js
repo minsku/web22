@@ -1,5 +1,5 @@
-import SodexoData from './modules/sodexo-data.js';
-import FazerData from './modules/fazer-data.js';
+import SodexoData from './modules/sodexo-data';
+import FazerData from './modules/fazer-data';
 
 let language = 'fi';
 let currentMenu = SodexoData.coursesFi;
@@ -60,6 +60,7 @@ const pickARandomCourse = courses => {
  * Initialize application
  */
 const init = () => {
+
   renderMenu();
   // Event listeners for buttons
   document.querySelector('#switch-lang').addEventListener('click', () => {
