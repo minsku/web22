@@ -36,8 +36,7 @@ const fun = () => {
 
 /*
 * teht. 3
-* console loggaa kun painetaan nappia
-* ei reagoi hiiren klikkauksiin
+* console log when button is pressed
 */
 document.addEventListener('keydown', event =>{
   console.log('painoit: ', event.key);
@@ -57,7 +56,7 @@ timer();
 
 /*
 * teht. 5
-* kun käyttäjä ollut sivulla toimimattomana 15 sec
+* when no action for 15 sec on page
 */
 const waiting = (duration) => {
   let timer;
